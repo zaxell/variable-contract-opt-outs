@@ -22,7 +22,7 @@ LeaveWAR=0.0
 StayWAR=0.0
 DeclineYears=0.0
 
-for i in range (1000000):
+for i in range (10000000):
     WARCount=WAR0
     YearCount=0
     SumWARIter=0.0
@@ -57,12 +57,12 @@ for i in range (1000000):
         
 
 
-print ("Odds of opt out are "+ str(DidHeOptOut/1000000))
+print ("Odds of opt out are "+ str(DidHeOptOut/10000000))
 print ("Dollars per win were "+ str(round(SalaryPaid/SumWAR,2)))
 print ("Dollars per win without option would have been "+str(round(OptionlessSalary/OptionlessWAR,2)))
 print ("Optionless Salary= "+str(OptionlessSalary))
 print ("Optionless WAR= "+str(OptionlessWAR))
 print ("WAR when opting out is "+str(round(LeaveWAR/DidHeOptOut,2)))
 print ("Dollars per win when opting out are "+str(round(FrontYearCost*ExpiryYears/(LeaveWAR/DidHeOptOut),2)))
-print ("WAR when staying is "+str(round(StayWAR/(1000000-DidHeOptOut),2)))
-print ("Dollars per win when staying are "+str(round((FrontYearCost*ExpiryYears+TenorYears*OptionValue)/(StayWAR/(1000000-DidHeOptOut)),2)))
+print ("WAR when staying is "+str(round(StayWAR/(10000000-DidHeOptOut),2)))
+print ("Dollars per win when staying are "+str(round((FrontYearCost*ExpiryYears+TenorYears*OptionValue)/(StayWAR/(10000000-DidHeOptOut)),2)))
